@@ -15,9 +15,7 @@ class Input extends Component {
   }
 
   handleChange(event) {
-    this.state = {
-      pointTitle: event.target.value
-    }
+    this.setState({pointTitle: event.target.value.trim()})
   }
 
   keyPress(event) {
@@ -25,10 +23,8 @@ class Input extends Component {
       return;
     }
     // console.log(this.state.pointTitle.trim())
-    this.props.onEnter(this.state.pointTitle.trim());
-    this.state = {
-      pointTitle: ''
-    };
+    this.props.onEnter(this.state.pointTitle);
+    this.setState({pointTitle: ''});
     event.target.value = '';
   }
 }
