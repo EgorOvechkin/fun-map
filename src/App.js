@@ -14,13 +14,13 @@ class App extends Component {
   }
 
   render() {
-    const coordinates =this.state.points.map(point => point.coordinates);
+    const coordinates = this.state.points.map(point => point.coordinates);
     const titles =this.state.points.map(point => point.title);
 
     return (
       <div className="App">
         <Input onEnter={title => this.addPoint(title)} />
-        <Map pointCoordinates={coordinates} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
+        <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );
   }

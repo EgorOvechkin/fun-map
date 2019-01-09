@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeoObject } from 'react-yandex-maps';
+import { Placemark } from 'react-yandex-maps';
 
 function getCoordinates(event) {
   return event.get('target').geometry.getCoordinates();
@@ -7,9 +7,11 @@ function getCoordinates(event) {
 
 function Point(props) {
   return (
-    <GeoObject
-      geometry={{type: 'Point', coordinates: props.coordinates}}
+    <Placemark
+      geometry={props.coordinates}
       onDrag={event => props.onDrag(getCoordinates(event))}
+      modules={['geoObject.addon.balloon']}
+      properties={{balloonContentHeader: props.title}}
       options={{draggable: true}}
     />
   );
