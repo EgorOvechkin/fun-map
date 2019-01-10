@@ -12,7 +12,7 @@ function Point(props) {
       onDrag={event => props.onDrag(getCoordinates(event))}
       modules={['geoObject.addon.balloon']}
       properties={{balloonContentHeader: props.title}}
-      options={{draggable: true}}
+      options={{draggable: true, balloonPanelMaxMapArea: 0}}
     />
   );
 }
