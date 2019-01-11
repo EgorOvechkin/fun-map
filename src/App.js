@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.setMapRef = this.setMapRef.bind(this);
     this.setPointCoordinates = this.setPointCoordinates.bind(this);
+    this.movePoint = this.movePoint.bind(this);
     this.state = {
       points: []
     };
@@ -19,10 +20,19 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Input onEnter={title => this.addPoint(title)} />
+        <Input movePoint={this.movePoint} titles={titles} onEnter={title => this.addPoint(title)} />
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );
+  }
+
+  //TODO не привязываться к библиотеке
+  movePoint({oldIndex, newIndex}) {
+    const array = this.state.points.slice();
+    array.splice(newIndex < 0 ? array.length + newIndex : newIndex, 0, array.splice(oldIndex, 1)[0]);
+
+    // return array;
+    this.setState({points: array})
   }
 
   setMapRef(mapRef) {
@@ -34,7 +44,7 @@ class App extends Component {
     points[index].coordinates = coordinates;
 
     this.setState({points});
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   addPoint(title) {
