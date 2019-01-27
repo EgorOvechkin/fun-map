@@ -15,12 +15,11 @@ class App extends Component {
   }
 
   render() {
-    const coordinates = this.state.points.map(point => point.coordinates);
     const titles =this.state.points.map(point => point.title);
 
     return (
       <div className="app-container">
-        <RouteEditor movePoint={this.movePoint} titles={titles} onEnter={title => this.addPoint(title)} />
+        <RouteEditor titles={titles} movePoint={this.movePoint} addPoint={title => this.addPoint(title)} deletePoint={index => this.deletePoint(index)}/>
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );
@@ -51,7 +50,13 @@ class App extends Component {
     const point = {title, coordinates: this.map.getCenter()};
 
     this.setState({points: this.state.points.concat([point])})
-    console.log(title)
+  }
+
+  deletePoint(index) {
+    const points = this.state.points.slice();
+
+    points.splice(index, 1);
+    this.setState({points})
   }
 }
 

@@ -13,7 +13,7 @@ class RouteEditor extends Component {
     return (
       <div>
         < input type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
-        < PointsList titles={this.props.titles} onSortEnd={this.props.movePoint} />
+        < PointsList titles={this.props.titles} onSortEnd={this.props.movePoint} deletePoint={this.props.deletePoint}/>
       </div>
     )
   }
@@ -27,7 +27,7 @@ class RouteEditor extends Component {
       return;
     }
     // console.log(this.state.pointTitle.trim())
-    this.props.onEnter(this.state.pointTitle);
+    this.props.addPoint(this.state.pointTitle);
     this.setState({pointTitle: ''});
     event.target.value = '';
   }
