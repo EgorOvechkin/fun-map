@@ -12,7 +12,7 @@ const SortableList = SortableContainer((props) =>
 
 function PointsList(props) {
   return (
-    <SortableList titles={props.titles} deletePoint={props.deletePoint} distance={5} />
+    <SortableList titles={props.titles} deletePoint={props.deletePoint} onSortEnd={props.onSortEnd} distance={5} />
   )
 }
 
