@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Map from './components/Map';
-import Input from './components/Input';
+import RouteEditor from './components/RouteEditor';
 import './App.css';
 
 class App extends Component {
@@ -19,8 +19,8 @@ class App extends Component {
     const titles =this.state.points.map(point => point.title);
 
     return (
-      <div className="App">
-        <Input movePoint={this.movePoint} titles={titles} onEnter={title => this.addPoint(title)} />
+      <div className="app-container">
+        <RouteEditor movePoint={this.movePoint} titles={titles} onEnter={title => this.addPoint(title)} />
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );

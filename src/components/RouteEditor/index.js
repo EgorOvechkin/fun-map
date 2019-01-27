@@ -1,19 +1,7 @@
 import React, { Component } from 'react';
-import { SortableContainer, SortableElement } from 'react-sortable-hoc';
+import PointsList from './PointsList';
 
-const SortableItem = SortableElement(({value}) => <li>{value}</li>);
-
-const SortableList = SortableContainer(({items}) => {
-  return (
-    <ul>
-      {items.map((value, index) => (
-        <SortableItem key={`item-${index}`} index={index} value={value} />
-      ))}
-    </ul>
-  );
-});
-
-class Input extends Component {
+class RouteEditor extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +13,7 @@ class Input extends Component {
     return (
       <div>
         < input type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
-        < SortableList items={this.props.titles} onSortEnd={this.props.movePoint} />
+        < PointsList titles={this.props.titles} onSortEnd={this.props.movePoint} />
       </div>
     )
   }
@@ -45,4 +33,4 @@ class Input extends Component {
   }
 }
 
-export default Input;
+export default RouteEditor;
