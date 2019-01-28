@@ -1,36 +1,14 @@
 import React, { Component } from 'react';
 import PointsList from './PointsList';
+import PointInput from './PointInput';
 
-class RouteEditor extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pointTitle: ''
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        < input type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
-        < PointsList titles={this.props.titles} onSortEnd={this.props.movePoint} deletePoint={this.props.deletePoint}/>
-      </div>
-    )
-  }
-
-  handleChange(event) {
-    this.setState({pointTitle: event.target.value.trim()})
-  }
-
-  keyPress(event) {
-    if (event.key !== 'Enter') {
-      return;
-    }
-    // console.log(this.state.pointTitle.trim())
-    this.props.addPoint(this.state.pointTitle);
-    this.setState({pointTitle: ''});
-    event.target.value = '';
-  }
+function RouteEditor(props) {
+  return (
+    <div>
+      <PointInput addPoint={props.addPoint}/>
+      <PointsList titles={props.titles} onSortEnd={props.movePoint} deletePoint={props.deletePoint}/>
+    </div>
+  )
 }
 
 export default RouteEditor;
