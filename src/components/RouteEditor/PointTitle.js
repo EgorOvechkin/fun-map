@@ -1,10 +1,11 @@
 import React from 'react';
 import { SortableElement } from 'react-sortable-hoc';
+import './styles/PointTitle.css'
 
 const SortablePoint = SortableElement((props) =>
-  <li>
+  <li className='point-title-container'>
     {props.title}
-    <span onClick={props.deletePoint}>[x]</span>
+    <span className='point-delete-button' onClick={props.deletePoint}>[x]</span>
   </li>
 )
 

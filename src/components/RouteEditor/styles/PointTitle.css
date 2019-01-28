@@ -1,0 +1,10 @@
+.point-title-container {
+  border: 1px solid;
+  list-style-type: none;
+  background: #fff;
+  cursor: grab;
+}
+
+.point-delete-button {
+  cursor: pointer;
+}
