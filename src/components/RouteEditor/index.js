@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PointsList from './PointsList';
 import PointInput from './PointInput';
 
 function RouteEditor(props) {
   return (
     <div>
-      <PointInput addPoint={props.addPoint}/>
-      <PointsList titles={props.titles} onSortEnd={props.movePoint} deletePoint={props.deletePoint}/>
+      <PointInput addPoint={props.addPoint} />
+      <PointsList titles={props.titles} onSortEnd={props.movePoint} deletePoint={props.deletePoint} />
     </div>
   )
 }

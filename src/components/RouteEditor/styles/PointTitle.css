@@ -7,4 +7,10 @@
 
 .point-delete-button {
   cursor: pointer;
+  fill: #515151
+}
+
+.point-delete-button:hover {
+  cursor: pointer;
+  fill: #ff6347;
 }
