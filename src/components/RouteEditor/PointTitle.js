@@ -1,7 +1,7 @@
 import React from 'react';
 import { SortableElement } from 'react-sortable-hoc';
 import { ReactComponent as DeleteIcon } from '../../remove_icon.svg';
-import './styles/PointTitle.css'
+import './styles/PointTitle.css';
 
 const SortablePoint = SortableElement((props) =>
   <li className='point-title-container'>

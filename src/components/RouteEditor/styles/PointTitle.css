@@ -1,14 +1,25 @@
 .point-title-container {
-  border: 1px solid;
+  border: 1px solid  #efefef;
   list-style-type: none;
   background: #fff;
   cursor: grab;
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  height: 2em;
 }
 
 .point-delete-button {
+  /* display: none; */
   cursor: pointer;
   fill: #515151
 }
+
+/* .point-title-container:hover .point-delete-button {
+  display: block;
+} */
 
 .point-delete-button:hover {
   cursor: pointer;
