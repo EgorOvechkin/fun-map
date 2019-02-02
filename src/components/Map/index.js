@@ -21,6 +21,8 @@ class YMap extends Component {
         <Map
           defaultState={{ center: [54.321119, 48.399449], zoom: 15 }}
           instanceRef={this.props.setMapRef}
+          width={'100%'}
+          height={'100%'}
         >
           {points}
           <LineString coordinates={coordinates} />

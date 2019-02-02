@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles/PointInput.css'
 
 class RouteEditor extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class RouteEditor extends Component {
 
   render() {
     return (
-      <input type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
+      <input className='point-input' type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
     )
   }
 
