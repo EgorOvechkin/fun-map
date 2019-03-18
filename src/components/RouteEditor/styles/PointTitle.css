@@ -11,6 +11,13 @@
   height: 2em;
 }
 
+.point-title {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
 .point-delete-button {
   /* display: none; */
   cursor: pointer;

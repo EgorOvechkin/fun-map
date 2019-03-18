@@ -5,7 +5,7 @@ import './styles/PointTitle.css';
 
 const SortablePoint = SortableElement((props) =>
   <li className='point-title-container'>
-    <span>{props.title}</span>
+    <span className='point-title'>{props.title}</span>
     <DeleteIcon className='point-delete-button' onClick={props.deletePoint} />
   </li>
 )
