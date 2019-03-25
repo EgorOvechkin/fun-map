@@ -9,6 +9,8 @@ class App extends Component {
     this.setMapRef = this.setMapRef.bind(this);
     this.setPointCoordinates = this.setPointCoordinates.bind(this);
     this.movePoint = this.movePoint.bind(this);
+    this.addPoint = this.addPoint.bind(this);
+    this.deletePoint = this.deletePoint.bind(this);
     this.state = {
       points: []
     };
@@ -19,31 +21,28 @@ class App extends Component {
 
     return (
       <div className="app-container">
-        <RouteEditor titles={titles} movePoint={this.movePoint} addPoint={title => this.addPoint(title)} deletePoint={index => this.deletePoint(index)}/>
+        <RouteEditor titles={titles} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint}/>
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );
   }
 
-  //TODO не привязываться к библиотеке
-  movePoint({oldIndex, newIndex}) {
+  movePoint(oldIndex, newIndex) {
     const array = this.state.points.slice();
-    array.splice(newIndex < 0 ? array.length + newIndex : newIndex, 0, array.splice(oldIndex, 1)[0]);
+    array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
 
-    // return array;
     this.setState({points: array})
   }
 
   setMapRef(mapRef) {
     this.map = mapRef;
   }
-  //TODO event или coordinates ?
+
   setPointCoordinates(index, coordinates) {
     const points = this.state.points.slice();
     points[index].coordinates = coordinates;
 
     this.setState({points});
-    // console.log(this.state)
   }
 
   addPoint(title) {
