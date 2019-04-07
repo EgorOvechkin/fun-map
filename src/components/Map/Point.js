@@ -9,7 +9,7 @@ function Point(props) {
   return (
     <Placemark
       geometry={props.coordinates}
-      onDragEnd={event => props.onDrag(getCoordinates(event))}
+      onDrag={event => props.onDrag(getCoordinates(event))}
       modules={['geoObject.addon.balloon']}
       properties={{balloonContentHeader: props.title}}
       options={{draggable: true, balloonPanelMaxMapArea: 0}}
