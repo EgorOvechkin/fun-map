@@ -7,7 +7,7 @@ function RouteEditor(props) {
   return (
     <div className='route-editor'>
       <PointInput addPoint={props.addPoint} />
-      <PointsList titles={props.titles} onSortEnd={({oldIndex, newIndex}) => props.movePoint(oldIndex, newIndex)} deletePoint={props.deletePoint} />
+      <PointsList points={props.points} onSortEnd={props.movePoint} deletePoint={props.deletePoint} />
     </div>
   )
 }

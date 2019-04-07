@@ -7,11 +7,14 @@ class RouteEditor extends Component {
     this.state = {
       pointTitle: ''
     };
+
+    this.handleChange = this.handleChange.bind(this)
+    this.keyPress = this.keyPress.bind(this)
   }
 
   render() {
     return (
-      <input className='point-input' type="text" onChange={event => this.handleChange(event)} onKeyDown={event => this.keyPress(event)} />
+      <input className='point-input' type="text" onChange={this.handleChange} onKeyDown={this.keyPress} />
     )
   }
 
