@@ -5,16 +5,16 @@ import './styles/PointsList.css'
 
 const SortableList = SortableContainer((props) =>
   <ul className='points-list'>
-    {props.points.map((point, index) => {
+    {props.titles.map((title, index) => {
       const deletePoint = () => props.deletePoint(index)
-      return (<PointTitle key={`item-${index}`} index={index} title={point.title} deletePoint={deletePoint}/>)
+      return (<PointTitle key={`item-${index}`} index={index} title={title} deletePoint={deletePoint}/>)
     })}
   </ul>
 );
 
 function PointsList(props) {
   return (
-    <SortableList points={props.points} deletePoint={props.deletePoint} onSortEnd={props.onSortEnd} distance={5} />
+    <SortableList titles={props.titles} deletePoint={props.deletePoint} onSortEnd={props.onSortEnd} distance={5} />
   )
 }
 

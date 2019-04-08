@@ -5,14 +5,14 @@ import './styles/index.css'
 
 class RouteEditor extends Component {
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.points.map(point => point.title).join() !== nextProps.points.map(point => point.title).join()
+    return this.props.titles.toString() !== nextProps.titles.toString()
   }
 
   render() {
     return (
       <div className='route-editor'>
         <PointInput addPoint={this.props.addPoint} />
-        <PointsList points={this.props.points} onSortEnd={this.props.movePoint} deletePoint={this.props.deletePoint} />
+        <PointsList titles={this.props.titles} onSortEnd={this.props.movePoint} deletePoint={this.props.deletePoint} />
       </div>
     )
   }

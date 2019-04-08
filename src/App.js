@@ -17,11 +17,11 @@ class App extends Component {
   }
 
   render() {
-    // const titles = this.state.points.map(point => point.title);
+    const titles = this.state.points.map(point => point.title);
 
     return (
       <div className="app-container">
-        <RouteEditor points={this.state.points} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint}/>
+        <RouteEditor titles={titles} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint}/>
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );
