@@ -5,7 +5,7 @@ import './styles/index.css'
 
 class RouteEditor extends Component {
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.titles.toString() !== nextProps.titles.toString()
+    return this.props.titles.toString() !== nextProps.titles.toString();
   }
 
   render() {
