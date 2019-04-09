@@ -14,7 +14,7 @@ class RouteEditor extends PureComponent {
 
   render() {
     return (
-      <input className='point-input' type="text" onChange={this.handleChange} onKeyDown={this.keyPress} />
+      <input className='point-input' type="text" onChange={this.handleChange} onKeyDown={this.keyPress} placeholder={'Название точки маршрута'}/>
     );
   }
 
