@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PointsList from './PointsList';
 import PointInput from './PointInput';
-import './styles/index.css'
+import './styles/index.css';
 
 class RouteEditor extends Component {
   shouldComponentUpdate(nextProps, nextState) {

@@ -19,14 +19,9 @@
 }
 
 .point-delete-button {
-  /* display: none; */
   cursor: pointer;
   fill: #515151
 }
-
-/* .point-title-container:hover .point-delete-button {
-  display: block;
-} */
 
 .point-delete-button:hover {
   cursor: pointer;

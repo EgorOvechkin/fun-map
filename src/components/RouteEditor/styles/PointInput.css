@@ -8,3 +8,8 @@
 .point-input::placeholder {
   color: #bababa;
 }
+
+.point-input.error {
+  border-color: #fa9191;
+  outline-color: #f00
+}

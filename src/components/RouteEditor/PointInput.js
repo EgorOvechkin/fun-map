@@ -5,7 +5,8 @@ class RouteEditor extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      pointTitle: ''
+      pointTitle: '',
+      isValid: true
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -14,16 +15,33 @@ class RouteEditor extends PureComponent {
 
   render() {
     return (
-      <input className='point-input' type="text" onChange={this.handleChange} onKeyDown={this.keyPress} placeholder={'Название точки маршрута'}/>
+      <input
+        className={this.state.isValid ? 'point-input' : 'point-input error'}
+        type="text"
+        onChange={this.handleChange}
+        onKeyDown={this.keyPress}
+        placeholder={'Название точки маршрута'}
+      />
     );
   }
 
   handleChange(event) {
-    this.setState({pointTitle: event.target.value.trim()});
+    const newValue = event.target.value.trim();
+
+    this.setState({pointTitle: newValue});
+
+    if (!this.state.isValid) {
+      this.setState({isValid: newValue !== ''})
+    }
   }
 
   keyPress(event) {
     if (event.key !== 'Enter') {
+      return;
+    }
+
+    if (!this.state.pointTitle) {
+      this.setState({isValid: false});
       return;
     }
 
