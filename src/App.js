@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Map from './components/Map';
-import RouteEditor from './components/RouteEditor';
+import RouteEditor from './components/RouteEditor/RouteEditor';
+import PointInput from './components/RouteEditor/PointInput';
+import PointList from './components/RouteEditor/PointList';
 import './App.css';
 
 class App extends Component {
@@ -21,7 +23,10 @@ class App extends Component {
 
     return (
       <div className="app-container">
-        <RouteEditor titles={titles} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint}/>
+        <RouteEditor>
+          <PointInput addPoint={this.addPoint}/>
+          <PointList titles={titles} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint} onSortEnd={this.movePoint}/>
+        </RouteEditor>
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>
     );

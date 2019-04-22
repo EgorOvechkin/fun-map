@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { SortableElement } from 'react-sortable-hoc';
 import { ReactComponent as DeleteIcon } from '../../remove_icon.svg';
 import './styles/PointTitle.css';
@@ -10,10 +10,17 @@ const SortablePoint = SortableElement((props) =>
   </li>
 )
 
-function PointTitle(props) {
-  return (
-    <SortablePoint title={props.title} index={props.index} deletePoint={props.deletePoint}/>
-  )
+class PointTitle extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.deletePoint = () => this.props.deletePoint(this.props.index)
+  }
+
+  render() {
+    return (
+      <SortablePoint title={this.props.title} index={this.props.index} deletePoint={this.deletePoint}/>
+    )
+  }
 }
 
 export default PointTitle;
