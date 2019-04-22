@@ -11,6 +11,7 @@ class RouteEditor extends PureComponent {
 
     this.handleChange = this.handleChange.bind(this);
     this.keyPress = this.keyPress.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   render() {
@@ -18,11 +19,18 @@ class RouteEditor extends PureComponent {
       <input
         className={this.state.isValid ? 'point-input' : 'point-input error'}
         type="text"
+        onBlur={this.onBlur}
         onChange={this.handleChange}
         onKeyDown={this.keyPress}
         placeholder={'Название точки маршрута'}
       />
     );
+  }
+
+  onBlur() {
+    if (!this.state.isValid) {
+      this.setState({isValid: true})
+    }
   }
 
   handleChange(event) {
