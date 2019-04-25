@@ -6,7 +6,6 @@ import './styles/PointsList.css'
 const SortableList = SortableContainer((props) =>
   <ul className='points-list'>
     {props.titles.map((title, index) => {
-      // const deletePoint = () => props.deletePoint(index)
       return (<PointTitle key={`item-${index}`} index={index} title={title} deletePoint={props.deletePoint}/>)
     })}
   </ul>
@@ -14,7 +13,7 @@ const SortableList = SortableContainer((props) =>
 
 class PointsList extends Component {
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return this.props.titles.toString() !== nextProps.titles.toString();
   }
 
