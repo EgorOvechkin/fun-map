@@ -22,7 +22,7 @@ class RouteEditor extends PureComponent {
         onBlur={this.onBlur}
         onChange={this.handleChange}
         onKeyDown={this.keyPress}
-        placeholder={'Название точки маршрута'}
+        placeholder={'Новая точка маршрута'}
       />
     );
   }
