@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from '../App';
 import {shallow} from 'enzyme';
 
 function getAppWithPoints(length) {
@@ -28,6 +28,11 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
+});
+
+it('renders the app', () => {
+  const wrapper = getAppWithPoints(3);
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('moves point', () => {
@@ -70,7 +75,6 @@ it('adds point', () => {
   const center = [55,55];
   const getCenter = jest.fn().mockReturnValue(center);
   const mapInstance = jest.fn().mockReturnValue({getCenter});
-
 
   wrapper.instance().map = mapInstance();
   wrapper.instance().addPoint('new_point');

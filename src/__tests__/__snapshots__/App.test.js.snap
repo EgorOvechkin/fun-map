@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the app 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <RouteEditor>
+          <RouteEditor
+            addPoint={[Function]}
+          />
+          <PointsList
+            addPoint={[Function]}
+            deletePoint={[Function]}
+            movePoint={[Function]}
+            onSortEnd={[Function]}
+            titles={
+              Array [
+                "point_1",
+                "point_2",
+                "point_3",
+              ]
+            }
+          />
+        </RouteEditor>,
+        <YMap
+          onPointDrag={[Function]}
+          points={
+            Array [
+              Object {
+                "coordinates": Array [
+                  11,
+                  11,
+                ],
+                "title": "point_1",
+              },
+              Object {
+                "coordinates": Array [
+                  22,
+                  22,
+                ],
+                "title": "point_2",
+              },
+              Object {
+                "coordinates": Array [
+                  33,
+                  33,
+                ],
+                "title": "point_3",
+              },
+            ]
+          }
+          setMapRef={[Function]}
+        />,
+      ],
+      "className": "app-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RouteEditor
+              addPoint={[Function]}
+            />,
+            <PointsList
+              addPoint={[Function]}
+              deletePoint={[Function]}
+              movePoint={[Function]}
+              onSortEnd={[Function]}
+              titles={
+                Array [
+                  "point_1",
+                  "point_2",
+                  "point_3",
+                ]
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "addPoint": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "addPoint": [Function],
+              "deletePoint": [Function],
+              "movePoint": [Function],
+              "onSortEnd": [Function],
+              "titles": Array [
+                "point_1",
+                "point_2",
+                "point_3",
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onPointDrag": [Function],
+          "points": Array [
+            Object {
+              "coordinates": Array [
+                11,
+                11,
+              ],
+              "title": "point_1",
+            },
+            Object {
+              "coordinates": Array [
+                22,
+                22,
+              ],
+              "title": "point_2",
+            },
+            Object {
+              "coordinates": Array [
+                33,
+                33,
+              ],
+              "title": "point_3",
+            },
+          ],
+          "setMapRef": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <RouteEditor>
+            <RouteEditor
+              addPoint={[Function]}
+            />
+            <PointsList
+              addPoint={[Function]}
+              deletePoint={[Function]}
+              movePoint={[Function]}
+              onSortEnd={[Function]}
+              titles={
+                Array [
+                  "point_1",
+                  "point_2",
+                  "point_3",
+                ]
+              }
+            />
+          </RouteEditor>,
+          <YMap
+            onPointDrag={[Function]}
+            points={
+              Array [
+                Object {
+                  "coordinates": Array [
+                    11,
+                    11,
+                  ],
+                  "title": "point_1",
+                },
+                Object {
+                  "coordinates": Array [
+                    22,
+                    22,
+                  ],
+                  "title": "point_2",
+                },
+                Object {
+                  "coordinates": Array [
+                    33,
+                    33,
+                  ],
+                  "title": "point_3",
+                },
+              ]
+            }
+            setMapRef={[Function]}
+          />,
+        ],
+        "className": "app-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RouteEditor
+                addPoint={[Function]}
+              />,
+              <PointsList
+                addPoint={[Function]}
+                deletePoint={[Function]}
+                movePoint={[Function]}
+                onSortEnd={[Function]}
+                titles={
+                  Array [
+                    "point_1",
+                    "point_2",
+                    "point_3",
+                  ]
+                }
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "addPoint": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "addPoint": [Function],
+                "deletePoint": [Function],
+                "movePoint": [Function],
+                "onSortEnd": [Function],
+                "titles": Array [
+                  "point_1",
+                  "point_2",
+                  "point_3",
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPointDrag": [Function],
+            "points": Array [
+              Object {
+                "coordinates": Array [
+                  11,
+                  11,
+                ],
+                "title": "point_1",
+              },
+              Object {
+                "coordinates": Array [
+                  22,
+                  22,
+                ],
+                "title": "point_2",
+              },
+              Object {
+                "coordinates": Array [
+                  33,
+                  33,
+                ],
+                "title": "point_3",
+              },
+            ],
+            "setMapRef": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
