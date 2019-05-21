@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import PointInput from '../../components/RouteEditor/PointInput';
 import {shallow} from 'enzyme';
 
+let wrapper;
+beforeEach(() => wrapper = shallow(<PointInput />));
 
 describe('onBlur', () => {
   it('changes isValid from false to true', () => {
-    const wrapper = shallow(<PointInput />);
     wrapper.simulate('focus');
     wrapper.setState({isValid: false});
     wrapper.simulate('blur');
@@ -14,7 +15,6 @@ describe('onBlur', () => {
   })
 
   it(`doesn't change isValid when it is true`, () => {
-    const wrapper = shallow(<PointInput />)
     wrapper.setState({isValid: true});
     wrapper.simulate('focus')
     wrapper.simulate('blur')
@@ -23,13 +23,15 @@ describe('onBlur', () => {
 })
 
 describe('handleChange', () => {
-  const wrapper = shallow(<PointInput />);
 
-  it('saves input value when value is not empty', () => {
-    const newValue = 'point title';
 
-    wrapper.simulate('change', {target: {value: newValue}});
-    expect(wrapper.state('pointTitle')).toBe(newValue);
+  describe('when value is not empty', () => {
+    it('saves input value', () => {
+      const newValue = 'point title';
+
+      wrapper.simulate('change', {target: {value: newValue}});
+      expect(wrapper.state('pointTitle')).toBe(newValue);
+    })
   })
 
   describe('when isValid is false and new value is empty string', () => {
@@ -67,5 +69,19 @@ describe('handleChange', () => {
 })
 
 describe('keyPress', () => {
+  describe('when key is not Enter', () => {
+    it('does nothing', () => {
+      const event = {key: 'Up'};
+      const oldState = {isValid: true, pointTitle: 'point'};
 
-})
+      wrapper.setState(oldState);
+      wrapper.simulate('keydown', event);
+      expect(wrapper.state()).toMatchObject(oldState);
+    });
+  });
+
+  describe('when key is Enter', () => {
+    describe('when title is empty', () => {})
+    describe('when title is not empty', () => {})
+  });
+});
