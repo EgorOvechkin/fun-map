@@ -8,18 +8,18 @@ const SortablePoint = SortableElement((props) =>
     <span className='point-title'>{props.title}</span>
     <DeleteIcon className='point-delete-button' onClick={props.deletePoint} />
   </li>
-)
+);
 
 class PointTitle extends PureComponent {
   constructor(props) {
-    super(props)
-    this.deletePoint = () => this.props.deletePoint(this.props.index)
+    super(props);
+    this.deletePoint = () => this.props.deletePoint(this.props.index);
   }
 
   render() {
     return (
       <SortablePoint title={this.props.title} index={this.props.index} deletePoint={this.deletePoint}/>
-    )
+    );
   }
 }
 

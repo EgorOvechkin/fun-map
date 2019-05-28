@@ -5,7 +5,7 @@ import { YMaps, Map } from 'react-yandex-maps';
 
 class YMap extends Component {
   render() {
-    const coordinates = this.props.points.map(point => point.coordinates)
+    const coordinates = this.props.points.map(point => point.coordinates);
 
     const points = this.props.points.map((point, index) => (
       <Point

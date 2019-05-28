@@ -6,7 +6,7 @@ function RouteEditor(props) {
     <div className='route-editor'>
       {props.children}
     </div>
-  )
+  );
 }
 
 export default RouteEditor;

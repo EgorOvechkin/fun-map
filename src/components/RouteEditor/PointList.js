@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PointTitle from './PointTitle';
 import { SortableContainer } from 'react-sortable-hoc';
-import './styles/PointsList.css'
+import './styles/PointsList.css';
 
 const SortableList = SortableContainer((props) =>
   <ul className='points-list'>
     {props.titles.map((title, index) => {
-      return (<PointTitle key={`item-${index}`} index={index} title={title} deletePoint={props.deletePoint}/>)
+      return (<PointTitle key={`item-${index}`} index={index} title={title} deletePoint={props.deletePoint}/>);
     })}
   </ul>
 );
@@ -20,7 +20,7 @@ class PointsList extends Component {
   render() {
     return (
       <SortableList titles={this.props.titles} deletePoint={this.props.deletePoint} onSortEnd={this.props.onSortEnd} distance={5} />
-    )
+    );
   }
 }
 

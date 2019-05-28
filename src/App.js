@@ -36,7 +36,7 @@ class App extends Component {
     const array = this.state.points.slice();
     array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
 
-    this.setState({points: array})
+    this.setState({points: array});
   }
 
   setMapRef(mapRef) {
@@ -53,14 +53,14 @@ class App extends Component {
   addPoint(title) {
     const point = {title, coordinates: this.map.getCenter()};
 
-    this.setState({points: this.state.points.concat([point])})
+    this.setState({points: this.state.points.concat([point])});
   }
 
   deletePoint(index) {
     const points = this.state.points.slice();
 
     points.splice(index, 1);
-    this.setState({points})
+    this.setState({points});
   }
 }
 

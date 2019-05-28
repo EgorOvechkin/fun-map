@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import './styles/PointInput.css'
+import './styles/PointInput.css';
 
 class RouteEditor extends PureComponent {
   constructor(props) {
@@ -29,7 +29,7 @@ class RouteEditor extends PureComponent {
 
   onBlur() {
     if (!this.state.isValid) {
-      this.setState({isValid: true})
+      this.setState({isValid: true});
     }
   }
 
@@ -39,7 +39,7 @@ class RouteEditor extends PureComponent {
     this.setState({pointTitle: newValue});
 
     if (!this.state.isValid) {
-      this.setState({isValid: newValue !== ''})
+      this.setState({isValid: newValue !== ''});
     }
   }
 
