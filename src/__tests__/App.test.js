@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from '../App';
 import {shallow} from 'enzyme';
 
@@ -23,12 +22,6 @@ function getTitles(points) {
 function getCoordinates(points) {
   return points.map(point => point.coordinates);
 }
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
 it('renders the app', () => {
   const wrapper = getAppWithPoints(3);

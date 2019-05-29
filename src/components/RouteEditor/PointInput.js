@@ -19,6 +19,7 @@ class RouteEditor extends PureComponent {
       <input
         className={this.state.isValid ? 'point-input' : 'point-input error'}
         type="text"
+        value={this.state.pointTitle}s
         onBlur={this.onBlur}
         onChange={this.handleChange}
         onKeyDown={this.keyPress}
@@ -34,12 +35,12 @@ class RouteEditor extends PureComponent {
   }
 
   handleChange(event) {
-    const newValue = event.target.value.trim();
+    const newValue = event.target.value;
 
     this.setState({pointTitle: newValue});
 
     if (!this.state.isValid) {
-      this.setState({isValid: newValue !== ''});
+      this.setState({isValid: newValue.trim() !== ''});
     }
   }
 
@@ -48,14 +49,13 @@ class RouteEditor extends PureComponent {
       return;
     }
 
-    if (!this.state.pointTitle) {
-      this.setState({isValid: false});
+    if (!this.state.pointTitle.trim()) {
+      this.setState({isValid: false, pointTitle: ''});
       return;
     }
 
-    this.props.addPoint(this.state.pointTitle);
+    this.props.addPoint(this.state.pointTitle.trim());
     this.setState({pointTitle: ''});
-    event.target.value = '';
   }
 }
 

@@ -1,10 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PointInput from '../../components/RouteEditor/PointInput';
 import {shallow} from 'enzyme';
 
 let wrapper;
 beforeEach(() => wrapper = shallow(<PointInput />));
+
+it('renders valid point input', () => {
+  wrapper.setState({isValid: true});
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders not valid point input', () => {
+  wrapper.setState({isValid: false});
+  expect(wrapper).toMatchSnapshot();
+});
 
 describe('onBlur', () => {
   it('changes isValid from false to true', () => {
@@ -23,8 +32,6 @@ describe('onBlur', () => {
 });
 
 describe('handleChange', () => {
-
-
   describe('when value is not empty', () => {
     it('saves input value', () => {
       const newValue = 'point title';
@@ -41,7 +48,7 @@ describe('handleChange', () => {
 
       wrapper.simulate('change', {target: {value: newValue}});
       expect(wrapper.state('isValid')).toBeFalsy();
-      expect(wrapper.state('pointTitle')).toBe('');
+      expect(wrapper.state('pointTitle')).toBe(newValue);
     });
   });
 
@@ -81,7 +88,28 @@ describe('keyPress', () => {
   });
 
   describe('when key is Enter', () => {
-    describe('when title is empty', () => {});
-    describe('when title is not empty', () => {});
+    describe('when pointTitle is empty', () => {
+      it('sets isValid as flase', () => {
+        wrapper.setState({pointTitle: '', isValid: true});
+        wrapper.simulate('keydown', {key: 'Enter'});
+
+        expect(wrapper.state('isValid')).toBeFalsy();
+      });
+
+    });
+    describe('when pointTitle is not empty', () => {
+      it('calls addPoint and sets empty point title', () => {
+        const addPoint = jest.fn();
+        const event= {key: 'Enter'};
+        const pointTitle = 'Point';
+        wrapper.setState({pointTitle: pointTitle, isValid: true});
+        wrapper.setProps({addPoint: addPoint});
+        wrapper.simulate('keydown', event);
+
+        expect(addPoint.mock.calls.length).toBe(1);
+        expect(addPoint.mock.calls[0][0]).toBe(pointTitle);
+        expect(wrapper.state('pointTitle')).toBe('');
+      });
+    });
   });
 });
