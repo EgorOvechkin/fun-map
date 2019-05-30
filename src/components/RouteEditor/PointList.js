@@ -12,14 +12,17 @@ const SortableList = SortableContainer((props) =>
 );
 
 class PointsList extends Component {
-
   shouldComponentUpdate(nextProps) {
     return this.props.titles.toString() !== nextProps.titles.toString();
   }
 
   render() {
     return (
-      <SortableList titles={this.props.titles} deletePoint={this.props.deletePoint} onSortEnd={this.props.onSortEnd} distance={5} />
+      <SortableList
+        titles={this.props.titles}
+        deletePoint={this.props.deletePoint}
+        onSortEnd={this.props.onSortEnd} distance={5}
+      />
     );
   }
 }
