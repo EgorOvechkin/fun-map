@@ -21,7 +21,8 @@ class PointsList extends Component {
       <SortableList
         titles={this.props.titles}
         deletePoint={this.props.deletePoint}
-        onSortEnd={this.props.onSortEnd} distance={5}
+        onSortEnd={this.props.onSortEnd}
+        distance={5}
       />
     );
   }

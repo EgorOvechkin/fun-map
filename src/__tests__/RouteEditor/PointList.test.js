@@ -19,7 +19,7 @@ describe('shouldComponentUpdate', () => {
   describe('when new titles is different', () => {
     it('should be true', () => {
       const oldTitles = generateTitles(3);
-      const newTitles = generateTitles(2).concat('Different point');
+      const newTitles = generateTitles(3).reverse();
       const wrapper = shallow(<PointList titles={oldTitles} />);
 
       const shouldUpdate = wrapper.instance().shouldComponentUpdate({titles: newTitles});
