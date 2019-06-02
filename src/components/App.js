@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Map from './components/Map/Map';
-import RouteEditor from './components/RouteEditor/RouteEditor';
-import PointInput from './components/RouteEditor/PointInput';
-import PointList from './components/RouteEditor/PointList';
-import './App.css';
+import Map from './Map/Map';
+import RouteEditor from './RouteEditor/RouteEditor';
+import PointInput from './RouteEditor/PointInput';
+import PointList from './RouteEditor/PointList';
+import '../App.css';
 
 class App extends Component {
   constructor(props) {
