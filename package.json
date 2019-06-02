@@ -13,7 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:debugging": "react-scripts --inspect-brk test --env=jsdom -i",
+    "test:debugging": "react-scripts --inspect-brk test --no-cache --env=jsdom -i --no-watch",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject"
   },
