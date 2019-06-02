@@ -48,6 +48,14 @@ it('moves point', () => {
   expect(coordinates).toMatchObject([[22,22], [11,11], [33,33]]);
 });
 
+it('sets map ref', () => {
+  const wrapper = getAppWithPoints(3);
+  const ref = {offsetHeight: 100};
+
+  wrapper.instance().setMapRef(ref);
+  expect(wrapper.instance().map).toMatchObject(ref);
+});
+
 it('sets point coordinates', () => {
   const wrapper = getAppWithPoints(2);
   const newCoordinates = [33,33];
