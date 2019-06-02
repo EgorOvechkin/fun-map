@@ -4,6 +4,12 @@ import {shallow} from 'enzyme';
 
 const generateTitles = n => Array.from({length: n}, (item, index) => `Point ${++index}`);
 
+it('renders point list', () => {
+  const titles = generateTitles(5);
+  const wrapper = shallow(<PointList titles={titles} />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 describe('shouldComponentUpdate', () => {
   describe('when new titles is same', () => {
     it('should be false', () => {
