@@ -10,7 +10,7 @@ class PointTitle extends PureComponent {
 
   render() {
     return (
-      <SortablePoint title={this.props.title} index={this.props.index} deletePoint={this.deletePoint}/>
+      <SortablePoint title={this.props.title} index={this.props.index} deletePoint={this.deletePoint} />
     );
   }
 }
