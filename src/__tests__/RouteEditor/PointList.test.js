@@ -1,6 +1,6 @@
 import React from 'react';
 import PointList from '../../components/RouteEditor/PointList';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 
 const generateTitles = n => Array.from({length: n}, (item, index) => `Point ${++index}`);
 
@@ -8,6 +8,15 @@ it('renders point list', () => {
   const titles = generateTitles(5);
   const wrapper = shallow(<PointList titles={titles} />);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('renders PointTitles', () => {
+  const titleCount = 5;
+  const titles = generateTitles(titleCount);
+  const wrapper = mount(<PointList titles={titles} />);
+
+  expect(wrapper.find('PointTitle').length).toBe(titleCount);
+  expect(wrapper.text()).toMatch(new RegExp(titles.join('.*')));
 });
 
 describe('shouldComponentUpdate', () => {
