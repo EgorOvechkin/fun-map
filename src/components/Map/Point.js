@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Placemark } from 'react-yandex-maps';
 
-function getCoordinates(event) {
-  return event.get('target').geometry.getCoordinates();
-}
+class Point extends Component {
+  constructor(props) {
+    super(props);
+    this.onDrag = this.onDrag.bind(this);
+  }
 
-function Point(props) {
-  return (
-    <Placemark
-      geometry={props.coordinates}
-      onDrag={event => props.onDrag(getCoordinates(event))}
-      modules={['geoObject.addon.balloon']}
-      properties={{balloonContentHeader: props.title}}
-      options={{draggable: true, balloonPanelMaxMapArea: 0}}
-    />
-  );
+  onDrag(event) {
+    this.props.onDrag(event.get('target').geometry.getCoordinates());
+  }
+
+  render() {
+    return (
+      <Placemark
+        geometry={this.props.coordinates}
+        onDrag={this.onDrag}
+        modules={['geoObject.addon.balloon']}
+        properties={{balloonContentHeader: this.props.title}}
+        options={{draggable: true, balloonPanelMaxMapArea: 0}}
+      />
+   );
+  }
 }
 
 export default Point;

@@ -19,7 +19,7 @@ class RouteEditor extends PureComponent {
       <input
         className={this.state.isValid ? 'point-input' : 'point-input error'}
         type="text"
-        value={this.state.pointTitle}s
+        value={this.state.pointTitle}
         onBlur={this.onBlur}
         onChange={this.handleChange}
         onKeyDown={this.keyPress}

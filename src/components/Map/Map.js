@@ -5,16 +5,21 @@ import { YMaps, Map } from 'react-yandex-maps';
 
 class YMap extends Component {
   render() {
-    const coordinates = this.props.points.map(point => point.coordinates);
+    const coordinates = [];
+    const points = [];
 
-    const points = this.props.points.map((point, index) => (
-      <Point
-        key={`point-${index}`}
-        title={point.title}
-        coordinates={point.coordinates}
-        onDrag={event => this.props.onPointDrag(index, event)}
-      />
-    ));
+    this.props.points.forEach((point, index) => {
+      coordinates.push(point.coordinates);
+
+      points.push(
+        <Point
+          key={`point-${index}`}
+          title={point.title}
+          coordinates={point.coordinates}
+          onDrag={event => this.props.onPointDrag(index, event)}
+        />
+      );
+    });
 
     return (
       <YMaps>
