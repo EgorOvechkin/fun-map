@@ -3,6 +3,11 @@ import Point from './Point';
 import LineString from './LineString';
 import { YMaps, Map } from 'react-yandex-maps';
 
+const MAP_STATE = {
+  center: [54.321119, 48.399449],
+  zoom: 15
+};
+
 class YMap extends Component {
   render() {
     const coordinates = [];
@@ -24,7 +29,7 @@ class YMap extends Component {
     return (
       <YMaps>
         <Map
-          defaultState={{ center: [54.321119, 48.399449], zoom: 15 }}
+          defaultState={MAP_STATE}
           instanceRef={this.props.setMapRef}
           width={'100%'}
           height={'100%'}
