@@ -1,15 +1,12 @@
 import React from 'react';
 import App from '../components/App';
 import {shallow} from 'enzyme';
+import {generatePoints} from 'helpers';
 
 function getAppWithPoints(length) {
-  const points = [];
-
-  for (let i = 1; i <= length; i++) {
-    points.push({title: `point_${i}`, coordinates: [10 * i + i, 10 * i + i]});
-  }
-
+  const points = generatePoints(length);
   const wrapper = shallow(<App />);
+
   wrapper.setState({points});
 
   return wrapper;
@@ -35,7 +32,7 @@ it('moves point', () => {
   let coordinates = getCoordinates(points);
 
   expect(points.length).toBe(3);
-  expect(titles).toBe('point_1, point_2, point_3');
+  expect(titles).toBe('Point 1, Point 2, Point 3');
   expect(coordinates).toMatchObject([[11,11], [22,22], [33,33]]);
 
   wrapper.instance().movePoint({oldIndex: 0, newIndex: 1});
@@ -44,7 +41,7 @@ it('moves point', () => {
   titles = getTitles(points);
   coordinates = getCoordinates(points);
   expect(points.length).toBe(3);
-  expect(titles).toBe('point_2, point_1, point_3');
+  expect(titles).toBe('Point 2, Point 1, Point 3');
   expect(coordinates).toMatchObject([[22,22], [11,11], [33,33]]);
 });
 
@@ -78,13 +75,13 @@ it('adds point', () => {
   const mapInstance = jest.fn().mockReturnValue({getCenter});
 
   wrapper.instance().map = mapInstance();
-  wrapper.instance().addPoint('new_point');
+  wrapper.instance().addPoint('New point');
   const points = wrapper.state('points');
   const coordinates = getCoordinates(points);
   const titles = getTitles(points);
 
   expect(getCenter.mock.calls.length).toBe(1);
-  expect(titles).toBe('point_1, new_point');
+  expect(titles).toBe('Point 1, New point');
   expect(coordinates).toMatchObject([[11,11], center]);
 });
 
@@ -96,6 +93,6 @@ it('deletes point', () => {
   const coordinates = getCoordinates(points);
   const titles = getTitles(points);
 
-  expect(titles).toBe('point_1');
+  expect(titles).toBe('Point 1');
   expect(coordinates).toMatchObject([[11,11]]);
 });

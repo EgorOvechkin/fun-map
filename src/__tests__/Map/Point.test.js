@@ -41,4 +41,3 @@ describe('on drag event', () => {
     expect(onDragProperty.mock.calls[0][0]).toMatchObject(coordinates);
   });
 });
-

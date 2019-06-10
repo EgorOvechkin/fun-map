@@ -30,9 +30,9 @@ ShallowWrapper {
             onSortEnd={[Function]}
             titles={
               Array [
-                "point_1",
-                "point_2",
-                "point_3",
+                "Point 1",
+                "Point 2",
+                "Point 3",
               ]
             }
           />
@@ -46,21 +46,21 @@ ShallowWrapper {
                   11,
                   11,
                 ],
-                "title": "point_1",
+                "title": "Point 1",
               },
               Object {
                 "coordinates": Array [
                   22,
                   22,
                 ],
-                "title": "point_2",
+                "title": "Point 2",
               },
               Object {
                 "coordinates": Array [
                   33,
                   33,
                 ],
-                "title": "point_3",
+                "title": "Point 3",
               },
             ]
           }
@@ -87,9 +87,9 @@ ShallowWrapper {
               onSortEnd={[Function]}
               titles={
                 Array [
-                  "point_1",
-                  "point_2",
-                  "point_3",
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
                 ]
               }
             />,
@@ -118,9 +118,9 @@ ShallowWrapper {
               "movePoint": [Function],
               "onSortEnd": [Function],
               "titles": Array [
-                "point_1",
-                "point_2",
-                "point_3",
+                "Point 1",
+                "Point 2",
+                "Point 3",
               ],
             },
             "ref": null,
@@ -142,21 +142,21 @@ ShallowWrapper {
                 11,
                 11,
               ],
-              "title": "point_1",
+              "title": "Point 1",
             },
             Object {
               "coordinates": Array [
                 22,
                 22,
               ],
-              "title": "point_2",
+              "title": "Point 2",
             },
             Object {
               "coordinates": Array [
                 33,
                 33,
               ],
-              "title": "point_3",
+              "title": "Point 3",
             },
           ],
           "setMapRef": [Function],
@@ -186,9 +186,9 @@ ShallowWrapper {
               onSortEnd={[Function]}
               titles={
                 Array [
-                  "point_1",
-                  "point_2",
-                  "point_3",
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
                 ]
               }
             />
@@ -202,21 +202,21 @@ ShallowWrapper {
                     11,
                     11,
                   ],
-                  "title": "point_1",
+                  "title": "Point 1",
                 },
                 Object {
                   "coordinates": Array [
                     22,
                     22,
                   ],
-                  "title": "point_2",
+                  "title": "Point 2",
                 },
                 Object {
                   "coordinates": Array [
                     33,
                     33,
                   ],
-                  "title": "point_3",
+                  "title": "Point 3",
                 },
               ]
             }
@@ -243,9 +243,9 @@ ShallowWrapper {
                 onSortEnd={[Function]}
                 titles={
                   Array [
-                    "point_1",
-                    "point_2",
-                    "point_3",
+                    "Point 1",
+                    "Point 2",
+                    "Point 3",
                   ]
                 }
               />,
@@ -274,9 +274,9 @@ ShallowWrapper {
                 "movePoint": [Function],
                 "onSortEnd": [Function],
                 "titles": Array [
-                  "point_1",
-                  "point_2",
-                  "point_3",
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
                 ],
               },
               "ref": null,
@@ -298,21 +298,21 @@ ShallowWrapper {
                   11,
                   11,
                 ],
-                "title": "point_1",
+                "title": "Point 1",
               },
               Object {
                 "coordinates": Array [
                   22,
                   22,
                 ],
-                "title": "point_2",
+                "title": "Point 2",
               },
               Object {
                 "coordinates": Array [
                   33,
                   33,
                 ],
-                "title": "point_3",
+                "title": "Point 3",
               },
             ],
             "setMapRef": [Function],

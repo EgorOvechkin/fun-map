@@ -1,0 +1,724 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Map 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <YMap
+    points={
+      Array [
+        Object {
+          "coordinates": Array [
+            11,
+            11,
+          ],
+          "title": "Point 1",
+        },
+        Object {
+          "coordinates": Array [
+            22,
+            22,
+          ],
+          "title": "Point 2",
+        },
+        Object {
+          "coordinates": Array [
+            33,
+            33,
+          ],
+          "title": "Point 3",
+        },
+        Object {
+          "coordinates": Array [
+            44,
+            44,
+          ],
+          "title": "Point 4",
+        },
+        Object {
+          "coordinates": Array [
+            55,
+            55,
+          ],
+          "title": "Point 5",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <withYMapsContext(withYMaps(Map))
+        defaultState={
+          Object {
+            "center": Array [
+              54.321119,
+              48.399449,
+            ],
+            "zoom": 15,
+          }
+        }
+        height="100%"
+        width="100%"
+      >
+        <Point
+          coordinates={
+            Array [
+              11,
+              11,
+            ]
+          }
+          onDrag={[Function]}
+          title="Point 1"
+        />
+        <Point
+          coordinates={
+            Array [
+              22,
+              22,
+            ]
+          }
+          onDrag={[Function]}
+          title="Point 2"
+        />
+        <Point
+          coordinates={
+            Array [
+              33,
+              33,
+            ]
+          }
+          onDrag={[Function]}
+          title="Point 3"
+        />
+        <Point
+          coordinates={
+            Array [
+              44,
+              44,
+            ]
+          }
+          onDrag={[Function]}
+          title="Point 4"
+        />
+        <Point
+          coordinates={
+            Array [
+              55,
+              55,
+            ]
+          }
+          onDrag={[Function]}
+          title="Point 5"
+        />
+        <LineString
+          coordinates={
+            Array [
+              Array [
+                11,
+                11,
+              ],
+              Array [
+                22,
+                22,
+              ],
+              Array [
+                33,
+                33,
+              ],
+              Array [
+                44,
+                44,
+              ],
+              Array [
+                55,
+                55,
+              ],
+            ]
+          }
+        />
+      </withYMapsContext(withYMaps(Map))>,
+      "enterprise": false,
+      "preload": false,
+      "query": Object {
+        "lang": "ru_RU",
+        "load": "",
+        "ns": "",
+      },
+      "version": "2.1",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          Array [
+            <Point
+              coordinates={
+                Array [
+                  11,
+                  11,
+                ]
+              }
+              onDrag={[Function]}
+              title="Point 1"
+            />,
+            <Point
+              coordinates={
+                Array [
+                  22,
+                  22,
+                ]
+              }
+              onDrag={[Function]}
+              title="Point 2"
+            />,
+            <Point
+              coordinates={
+                Array [
+                  33,
+                  33,
+                ]
+              }
+              onDrag={[Function]}
+              title="Point 3"
+            />,
+            <Point
+              coordinates={
+                Array [
+                  44,
+                  44,
+                ]
+              }
+              onDrag={[Function]}
+              title="Point 4"
+            />,
+            <Point
+              coordinates={
+                Array [
+                  55,
+                  55,
+                ]
+              }
+              onDrag={[Function]}
+              title="Point 5"
+            />,
+          ],
+          <LineString
+            coordinates={
+              Array [
+                Array [
+                  11,
+                  11,
+                ],
+                Array [
+                  22,
+                  22,
+                ],
+                Array [
+                  33,
+                  33,
+                ],
+                Array [
+                  44,
+                  44,
+                ],
+                Array [
+                  55,
+                  55,
+                ],
+              ]
+            }
+          />,
+        ],
+        "defaultState": Object {
+          "center": Array [
+            54.321119,
+            48.399449,
+          ],
+          "zoom": 15,
+        },
+        "height": "100%",
+        "instanceRef": undefined,
+        "width": "100%",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "point-0",
+          "nodeType": "class",
+          "props": Object {
+            "coordinates": Array [
+              11,
+              11,
+            ],
+            "onDrag": [Function],
+            "title": "Point 1",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "point-1",
+          "nodeType": "class",
+          "props": Object {
+            "coordinates": Array [
+              22,
+              22,
+            ],
+            "onDrag": [Function],
+            "title": "Point 2",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "point-2",
+          "nodeType": "class",
+          "props": Object {
+            "coordinates": Array [
+              33,
+              33,
+            ],
+            "onDrag": [Function],
+            "title": "Point 3",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "point-3",
+          "nodeType": "class",
+          "props": Object {
+            "coordinates": Array [
+              44,
+              44,
+            ],
+            "onDrag": [Function],
+            "title": "Point 4",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "point-4",
+          "nodeType": "class",
+          "props": Object {
+            "coordinates": Array [
+              55,
+              55,
+            ],
+            "onDrag": [Function],
+            "title": "Point 5",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "coordinates": Array [
+              Array [
+                11,
+                11,
+              ],
+              Array [
+                22,
+                22,
+              ],
+              Array [
+                33,
+                33,
+              ],
+              Array [
+                44,
+                44,
+              ],
+              Array [
+                55,
+                55,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <withYMapsContext(withYMaps(Map))
+          defaultState={
+            Object {
+              "center": Array [
+                54.321119,
+                48.399449,
+              ],
+              "zoom": 15,
+            }
+          }
+          height="100%"
+          width="100%"
+        >
+          <Point
+            coordinates={
+              Array [
+                11,
+                11,
+              ]
+            }
+            onDrag={[Function]}
+            title="Point 1"
+          />
+          <Point
+            coordinates={
+              Array [
+                22,
+                22,
+              ]
+            }
+            onDrag={[Function]}
+            title="Point 2"
+          />
+          <Point
+            coordinates={
+              Array [
+                33,
+                33,
+              ]
+            }
+            onDrag={[Function]}
+            title="Point 3"
+          />
+          <Point
+            coordinates={
+              Array [
+                44,
+                44,
+              ]
+            }
+            onDrag={[Function]}
+            title="Point 4"
+          />
+          <Point
+            coordinates={
+              Array [
+                55,
+                55,
+              ]
+            }
+            onDrag={[Function]}
+            title="Point 5"
+          />
+          <LineString
+            coordinates={
+              Array [
+                Array [
+                  11,
+                  11,
+                ],
+                Array [
+                  22,
+                  22,
+                ],
+                Array [
+                  33,
+                  33,
+                ],
+                Array [
+                  44,
+                  44,
+                ],
+                Array [
+                  55,
+                  55,
+                ],
+              ]
+            }
+          />
+        </withYMapsContext(withYMaps(Map))>,
+        "enterprise": false,
+        "preload": false,
+        "query": Object {
+          "lang": "ru_RU",
+          "load": "",
+          "ns": "",
+        },
+        "version": "2.1",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            Array [
+              <Point
+                coordinates={
+                  Array [
+                    11,
+                    11,
+                  ]
+                }
+                onDrag={[Function]}
+                title="Point 1"
+              />,
+              <Point
+                coordinates={
+                  Array [
+                    22,
+                    22,
+                  ]
+                }
+                onDrag={[Function]}
+                title="Point 2"
+              />,
+              <Point
+                coordinates={
+                  Array [
+                    33,
+                    33,
+                  ]
+                }
+                onDrag={[Function]}
+                title="Point 3"
+              />,
+              <Point
+                coordinates={
+                  Array [
+                    44,
+                    44,
+                  ]
+                }
+                onDrag={[Function]}
+                title="Point 4"
+              />,
+              <Point
+                coordinates={
+                  Array [
+                    55,
+                    55,
+                  ]
+                }
+                onDrag={[Function]}
+                title="Point 5"
+              />,
+            ],
+            <LineString
+              coordinates={
+                Array [
+                  Array [
+                    11,
+                    11,
+                  ],
+                  Array [
+                    22,
+                    22,
+                  ],
+                  Array [
+                    33,
+                    33,
+                  ],
+                  Array [
+                    44,
+                    44,
+                  ],
+                  Array [
+                    55,
+                    55,
+                  ],
+                ]
+              }
+            />,
+          ],
+          "defaultState": Object {
+            "center": Array [
+              54.321119,
+              48.399449,
+            ],
+            "zoom": 15,
+          },
+          "height": "100%",
+          "instanceRef": undefined,
+          "width": "100%",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "point-0",
+            "nodeType": "class",
+            "props": Object {
+              "coordinates": Array [
+                11,
+                11,
+              ],
+              "onDrag": [Function],
+              "title": "Point 1",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "point-1",
+            "nodeType": "class",
+            "props": Object {
+              "coordinates": Array [
+                22,
+                22,
+              ],
+              "onDrag": [Function],
+              "title": "Point 2",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "point-2",
+            "nodeType": "class",
+            "props": Object {
+              "coordinates": Array [
+                33,
+                33,
+              ],
+              "onDrag": [Function],
+              "title": "Point 3",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "point-3",
+            "nodeType": "class",
+            "props": Object {
+              "coordinates": Array [
+                44,
+                44,
+              ],
+              "onDrag": [Function],
+              "title": "Point 4",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "point-4",
+            "nodeType": "class",
+            "props": Object {
+              "coordinates": Array [
+                55,
+                55,
+              ],
+              "onDrag": [Function],
+              "title": "Point 5",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "coordinates": Array [
+                Array [
+                  11,
+                  11,
+                ],
+                Array [
+                  22,
+                  22,
+                ],
+                Array [
+                  33,
+                  33,
+                ],
+                Array [
+                  44,
+                  44,
+                ],
+                Array [
+                  55,
+                  55,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
