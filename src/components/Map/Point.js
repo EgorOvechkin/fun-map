@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Placemark } from 'react-yandex-maps';
 
 class Point extends Component {
@@ -23,5 +24,11 @@ class Point extends Component {
    );
   }
 }
+
+Point.propTypes = {
+  title: PropTypes.string,
+  coordinates: PropTypes.arrayOf(PropTypes.number),
+  onDrag: PropTypes.func
+};
 
 export default Point;

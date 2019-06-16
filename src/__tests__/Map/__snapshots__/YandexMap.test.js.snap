@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Map 1`] = `
+exports[`renders YandexMap 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <YMap
+  Symbol(enzyme.__unrendered__): <YandexMap
     points={
       Array [
         Object {

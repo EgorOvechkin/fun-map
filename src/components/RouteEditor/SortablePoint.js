@@ -12,7 +12,7 @@ const SortablePoint = SortableElement((props) =>
 
 SortablePoint.propTypes = {
   title: PropTypes.string,
-  index: PropTypes.number,
+  index: PropTypes.number.isRequired,
   deletePoint: PropTypes.func
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Map from './Map/Map';
+import YandexMap from './Map/YandexMap';
 import RouteEditor from './RouteEditor/RouteEditor';
 import PointInput from './RouteEditor/PointInput';
 import PointList from './RouteEditor/PointList';
@@ -24,14 +24,10 @@ class App extends Component {
     return (
       <div className="app-container">
         <RouteEditor>
-          <PointInput addPoint={this.addPoint}/>
-          <PointList
-            titles={titles}
-            deletePoint={this.deletePoint}
-            onSortEnd={this.movePoint}
-          />
+          <PointInput addPoint={this.addPoint} />
+          <PointList titles={titles} deletePoint={this.deletePoint} onSortEnd={this.movePoint} />
         </RouteEditor>
-        <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
+        <YandexMap points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef} />
       </div>
     );
   }

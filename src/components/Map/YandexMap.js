@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Point from './Point';
 import LineString from './LineString';
 import { YMaps, Map } from 'react-yandex-maps';
@@ -8,7 +9,7 @@ const MAP_STATE = {
   zoom: 15
 };
 
-class YMap extends Component {
+class YandexMap extends Component {
   render() {
     const coordinates = [];
     const points = [];
@@ -42,4 +43,13 @@ class YMap extends Component {
   }
 }
 
-export default YMap;
+YandexMap.propTypes = {
+  points: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    coordinates: PropTypes.arrayOf(PropTypes.number)
+  })),
+  onPointDrag: PropTypes.func,
+  setMapRef: PropTypes.func
+};
+
+export default YandexMap;

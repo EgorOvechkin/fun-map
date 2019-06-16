@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { GeoObject } from 'react-yandex-maps';
 
 function LineString(props) {
@@ -9,5 +10,9 @@ function LineString(props) {
     />
   );
 }
+
+LineString.propTypes = {
+  coordinates: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number))
+};
 
 export default LineString;
