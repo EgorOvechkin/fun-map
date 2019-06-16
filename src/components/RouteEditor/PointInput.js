@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import './styles/PointInput.css';
 
-class RouteEditor extends PureComponent {
+class PointInput extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,4 +60,8 @@ class RouteEditor extends PureComponent {
   }
 }
 
-export default RouteEditor;
+PointInput.propTypes = {
+  addPoint: PropTypes.func
+};
+
+export default PointInput;

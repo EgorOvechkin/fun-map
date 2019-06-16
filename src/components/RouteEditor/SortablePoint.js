@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { SortableElement } from 'react-sortable-hoc';
 import { ReactComponent as DeleteIcon } from '../../icons/remove_icon.svg';
 
@@ -8,5 +9,11 @@ const SortablePoint = SortableElement((props) =>
     <DeleteIcon className='point-delete-button' onClick={props.deletePoint} />
   </li>
 );
+
+SortablePoint.propTypes = {
+  title: PropTypes.string,
+  index: PropTypes.number,
+  deletePoint: PropTypes.func
+};
 
 export default SortablePoint;

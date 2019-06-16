@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1"
+    "enzyme-adapter-react-16": "^1.12.1",
+    "prop-types": "^15.7.2"
   }
 }

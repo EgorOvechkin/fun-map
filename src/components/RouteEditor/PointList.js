@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PointTitle from './PointTitle';
 import { SortableContainer } from 'react-sortable-hoc';
 import './styles/PointsList.css';
@@ -6,7 +7,7 @@ import './styles/PointsList.css';
 const SortableList = SortableContainer((props) =>
   <ul className='points-list'>
     {props.titles.map((title, index) => {
-      return (<PointTitle key={`item-${index}`} index={index} title={title} deletePoint={props.deletePoint}/>);
+      return (<PointTitle key={`point-title-${index}`} index={index} title={title} deletePoint={props.deletePoint}/>);
     })}
   </ul>
 );
@@ -27,5 +28,11 @@ class PointsList extends Component {
     );
   }
 }
+
+PointsList.propTypes = {
+  titles: PropTypes.arrayOf(PropTypes.string),
+  deletePoint: PropTypes.func,
+  onSortEnd: PropTypes.func
+};
 
 export default PointsList;

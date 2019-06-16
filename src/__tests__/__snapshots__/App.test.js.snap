@@ -20,13 +20,11 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <RouteEditor>
-          <RouteEditor
+          <PointInput
             addPoint={[Function]}
           />
           <PointsList
-            addPoint={[Function]}
             deletePoint={[Function]}
-            movePoint={[Function]}
             onSortEnd={[Function]}
             titles={
               Array [
@@ -77,13 +75,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <RouteEditor
+            <PointInput
               addPoint={[Function]}
             />,
             <PointsList
-              addPoint={[Function]}
               deletePoint={[Function]}
-              movePoint={[Function]}
               onSortEnd={[Function]}
               titles={
                 Array [
@@ -113,9 +109,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "addPoint": [Function],
               "deletePoint": [Function],
-              "movePoint": [Function],
               "onSortEnd": [Function],
               "titles": Array [
                 "Point 1",
@@ -176,13 +170,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <RouteEditor>
-            <RouteEditor
+            <PointInput
               addPoint={[Function]}
             />
             <PointsList
-              addPoint={[Function]}
               deletePoint={[Function]}
-              movePoint={[Function]}
               onSortEnd={[Function]}
               titles={
                 Array [
@@ -233,13 +225,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <RouteEditor
+              <PointInput
                 addPoint={[Function]}
               />,
               <PointsList
-                addPoint={[Function]}
                 deletePoint={[Function]}
-                movePoint={[Function]}
                 onSortEnd={[Function]}
                 titles={
                   Array [
@@ -269,9 +259,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "addPoint": [Function],
                 "deletePoint": [Function],
-                "movePoint": [Function],
                 "onSortEnd": [Function],
                 "titles": Array [
                   "Point 1",
@@ -348,7 +336,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
   Symbol(enzyme.__childContext__): null,
 }
 `;

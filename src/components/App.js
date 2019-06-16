@@ -25,7 +25,11 @@ class App extends Component {
       <div className="app-container">
         <RouteEditor>
           <PointInput addPoint={this.addPoint}/>
-          <PointList titles={titles} movePoint={this.movePoint} addPoint={this.addPoint} deletePoint={this.deletePoint} onSortEnd={this.movePoint}/>
+          <PointList
+            titles={titles}
+            deletePoint={this.deletePoint}
+            onSortEnd={this.movePoint}
+          />
         </RouteEditor>
         <Map points={this.state.points} onPointDrag={this.setPointCoordinates} setMapRef={this.setMapRef}/>
       </div>

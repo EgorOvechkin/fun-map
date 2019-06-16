@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import './styles/PointTitle.css';
 import SortablePoint from './SortablePoint';
 
@@ -14,5 +15,10 @@ class PointTitle extends PureComponent {
     );
   }
 }
+
+PointTitle.propTypes = {
+  title: PropTypes.string,
+  deletePoint: PropTypes.func
+};
 
 export default PointTitle;

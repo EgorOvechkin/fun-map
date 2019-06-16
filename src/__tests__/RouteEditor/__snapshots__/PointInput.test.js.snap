@@ -3,7 +3,7 @@
 exports[`renders not valid point input 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <RouteEditor />,
+  Symbol(enzyme.__unrendered__): <PointInput />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -72,7 +72,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
   Symbol(enzyme.__childContext__): null,
 }
 `;
@@ -80,7 +82,7 @@ ShallowWrapper {
 exports[`renders valid point input 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <RouteEditor />,
+  Symbol(enzyme.__unrendered__): <PointInput />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -149,7 +151,9 @@ ShallowWrapper {
         },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
   Symbol(enzyme.__childContext__): null,
 }
 `;
