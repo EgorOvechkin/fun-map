@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import YandexMap from './Map/YandexMap';
-import RouteEditor from './RouteEditor/RouteEditor';
+import '../App.css';
+import Loader from './Loader';
 import PointInput from './RouteEditor/PointInput';
 import PointList from './RouteEditor/PointList';
-import '../App.css';
+import React, { Component } from 'react';
+import RouteEditor from './RouteEditor/RouteEditor';
+import YandexMap from './Map/YandexMap';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends Component {
     this.addPoint = this.addPoint.bind(this);
     this.deletePoint = this.deletePoint.bind(this);
     this.state = {
+      isMapLoaded: false,
       points: []
     };
   }
@@ -21,8 +23,11 @@ class App extends Component {
   render() {
     const titles = this.state.points.map(point => point.title);
 
+    // debugger
+
     return (
       <div className="app-container">
+        {!false && <Loader message={'Загружаем карту...'}/>}
         <RouteEditor>
           <PointInput addPoint={this.addPoint} />
           <PointList titles={titles} deletePoint={this.deletePoint} onSortEnd={this.movePoint} />
@@ -41,6 +46,7 @@ class App extends Component {
 
   setMapRef(mapRef) {
     this.map = mapRef;
+    this.setState({isMapLoaded: Boolean(mapRef)});
   }
 
   setPointCoordinates(index, coordinates) {

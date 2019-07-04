@@ -3,3 +3,40 @@
   height: 100vh;
   padding-left: 1px;
 }
+
+.modal-loader {
+  background: #a2a29d8a;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.modal-loader .spinner {
+  position: absolute;
+  width: 200px;
+  top: 30%;
+  left: calc(50% - 100px);
+}
+
+.modal-loader .spinner .message{
+  width: 100%;
+  text-align: center;
+}
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
