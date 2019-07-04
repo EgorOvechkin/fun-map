@@ -4,7 +4,7 @@
   padding-left: 1px;
 }
 
-.modal-loader {
+.modal {
   background: #a2a29d8a;
   position: fixed;
   left: 0;
@@ -14,29 +14,28 @@
   z-index: 999;
 }
 
-.modal-loader .spinner {
+.modal .loader {
   position: absolute;
   width: 200px;
   top: 30%;
   left: calc(50% - 100px);
 }
 
-.modal-loader .spinner .message{
+.modal .loader .message {
   width: 100%;
   text-align: center;
 }
 
-#loading {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255,255,255,.3);
+.modal .loader .spinner {
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  border: 5px solid #bccf0030;
   border-radius: 50%;
-  border-top-color: #fff;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
+  border-top-color: #638e07;
+  animation: spin 1s cubic-bezier(.71,.42,.27,.6) infinite;
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }

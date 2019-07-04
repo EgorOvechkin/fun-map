@@ -23,11 +23,9 @@ class App extends Component {
   render() {
     const titles = this.state.points.map(point => point.title);
 
-    // debugger
-
     return (
       <div className="app-container">
-        {!false && <Loader message={'Загружаем карту...'}/>}
+        {!this.state.isMapLoaded && <Loader message={'Загружаем карту...'}/>}
         <RouteEditor>
           <PointInput addPoint={this.addPoint} />
           <PointList titles={titles} deletePoint={this.deletePoint} onSortEnd={this.movePoint} />
