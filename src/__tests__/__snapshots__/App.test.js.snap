@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the app 1`] = `
+exports[`renders loaded app 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App />,
@@ -19,6 +19,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        false,
         <RouteEditor>
           <PointInput
             addPoint={[Function]}
@@ -69,6 +70,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -169,6 +171,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          false,
           <RouteEditor>
             <PointInput
               addPoint={[Function]}
@@ -219,6 +222,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -336,9 +340,376 @@ ShallowWrapper {
         },
       },
     },
-    Symbol(enzyme.__providerValues__): undefined,
   },
-  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`renders not loaded app 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Loader
+          message="Загружаем карту..."
+        />,
+        <RouteEditor>
+          <PointInput
+            addPoint={[Function]}
+          />
+          <PointsList
+            deletePoint={[Function]}
+            onSortEnd={[Function]}
+            titles={
+              Array [
+                "Point 1",
+                "Point 2",
+                "Point 3",
+              ]
+            }
+          />
+        </RouteEditor>,
+        <YandexMap
+          onPointDrag={[Function]}
+          points={
+            Array [
+              Object {
+                "coordinates": Array [
+                  11,
+                  11,
+                ],
+                "title": "Point 1",
+              },
+              Object {
+                "coordinates": Array [
+                  22,
+                  22,
+                ],
+                "title": "Point 2",
+              },
+              Object {
+                "coordinates": Array [
+                  33,
+                  33,
+                ],
+                "title": "Point 3",
+              },
+            ]
+          }
+          setMapRef={[Function]}
+        />,
+      ],
+      "className": "app-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "message": "Загружаем карту...",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <PointInput
+              addPoint={[Function]}
+            />,
+            <PointsList
+              deletePoint={[Function]}
+              onSortEnd={[Function]}
+              titles={
+                Array [
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
+                ]
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "addPoint": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "deletePoint": [Function],
+              "onSortEnd": [Function],
+              "titles": Array [
+                "Point 1",
+                "Point 2",
+                "Point 3",
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onPointDrag": [Function],
+          "points": Array [
+            Object {
+              "coordinates": Array [
+                11,
+                11,
+              ],
+              "title": "Point 1",
+            },
+            Object {
+              "coordinates": Array [
+                22,
+                22,
+              ],
+              "title": "Point 2",
+            },
+            Object {
+              "coordinates": Array [
+                33,
+                33,
+              ],
+              "title": "Point 3",
+            },
+          ],
+          "setMapRef": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Loader
+            message="Загружаем карту..."
+          />,
+          <RouteEditor>
+            <PointInput
+              addPoint={[Function]}
+            />
+            <PointsList
+              deletePoint={[Function]}
+              onSortEnd={[Function]}
+              titles={
+                Array [
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
+                ]
+              }
+            />
+          </RouteEditor>,
+          <YandexMap
+            onPointDrag={[Function]}
+            points={
+              Array [
+                Object {
+                  "coordinates": Array [
+                    11,
+                    11,
+                  ],
+                  "title": "Point 1",
+                },
+                Object {
+                  "coordinates": Array [
+                    22,
+                    22,
+                  ],
+                  "title": "Point 2",
+                },
+                Object {
+                  "coordinates": Array [
+                    33,
+                    33,
+                  ],
+                  "title": "Point 3",
+                },
+              ]
+            }
+            setMapRef={[Function]}
+          />,
+        ],
+        "className": "app-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "message": "Загружаем карту...",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <PointInput
+                addPoint={[Function]}
+              />,
+              <PointsList
+                deletePoint={[Function]}
+                onSortEnd={[Function]}
+                titles={
+                  Array [
+                    "Point 1",
+                    "Point 2",
+                    "Point 3",
+                  ]
+                }
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "addPoint": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "deletePoint": [Function],
+                "onSortEnd": [Function],
+                "titles": Array [
+                  "Point 1",
+                  "Point 2",
+                  "Point 3",
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onPointDrag": [Function],
+            "points": Array [
+              Object {
+                "coordinates": Array [
+                  11,
+                  11,
+                ],
+                "title": "Point 1",
+              },
+              Object {
+                "coordinates": Array [
+                  22,
+                  22,
+                ],
+                "title": "Point 2",
+              },
+              Object {
+                "coordinates": Array [
+                  33,
+                  33,
+                ],
+                "title": "Point 3",
+              },
+            ],
+            "setMapRef": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
   Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -20,7 +20,13 @@ function getCoordinates(points) {
   return points.map(point => point.coordinates);
 }
 
-it('renders the app', () => {
+it('renders loaded app', () => {
+  const wrapper = getAppWithPoints(3);
+  wrapper.setState({isMapLoaded: true});
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders not loaded app', () => {
   const wrapper = getAppWithPoints(3);
   expect(wrapper).toMatchSnapshot();
 });
