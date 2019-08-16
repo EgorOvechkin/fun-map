@@ -4,7 +4,6 @@ The simple route editor based on [Yandex Maps API](https://tech.yandex.com/maps/
 with [react bindings](https://github.com/gribnoysup/react-yandex-maps)
 
 Task Requirements: https://dl.funbox.ru/qt-js.pdf (Level II).<br />
-You can find Level I answers [here](LEVEL-I.md).
 
 Live Demo: https://egorovechkin.github.io/
 
